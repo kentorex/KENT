@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Example</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url(img/homepage-hero-1x.jpg);
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 700px;
+      margin-top: 50px;
+      background-color: #ffffffb0;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .form-group input,
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .form-group button {
+      background-color: #2ecc71;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #27ae60;
+    }
+
+    .form-group input:focus,
+    .form-group button:focus {
+      outline: none;
+      border-color: #2ecc71;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Your full name here" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" placeholder="Your email here" id="email" required>
+      </div>
+      <
+      <!-- <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Create password" id="password" required>
+        <p class="error-message" id="password-error"></p>
+        <label for="agree">Please agree to our terms and condition</label>
+        <input type="checkbox" id="agree">
+      </div> -->
+      <div class="form-group">
+        <button type="button" id="register-btn">Register</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- <script>
+    const form = document.getElementById('registration-form');
+    const registerBtn = document.getElementById('register-btn');
+
+    registerBtn.addEventListener('click', function() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+      const isValidPassword = passwordPattern.test(password);
+
+      if (!isValidPassword) {
+        document.getElementById('password-error').textContent = "Password must have at least 1 uppercase letter, 1 lowercase letter, 1 number, and be at least 8 characters long.";
+        return;
+      } else {
+        document.getElementById('password-error').textContent = "";
+      }
+
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Password:', password);
+    });
+  </script> -->
+</body>
+</html>

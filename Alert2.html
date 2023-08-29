@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="alertBox" class="alert-box gradient-bg">
+  <span class="close-btn" onclick="closeAlert()">X</span>
+  <h1 class="banner-text">WELCOME</h1>
+  <button class="banner-btn" onclick="stopSeeing()">Stop Seeing</button>
+</div>
+
+</body>
+</html>
+
+<style>
+.alert-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: gradientAnimation 5s ease infinite;
+}
+
+.banner-text{
+  text-align: center;
+}
+
+.banner-btn{
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  width: 90px;
+  height: 30px;
+  background-color: #2ecc71;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover{
+  background-color: #27ae60;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-bg{
+  background: linear-gradient(to bottom right, #1cd8d2, #ff70a6);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+function closeAlert() {
+  let alertBox = document.getElementById("alertBox");
+  alertBox.style.display = "none";
+}
+
+function stopSeeing() {
+  clearInterval(alertInterval);
+  closeAlert();
+}
+
+const alertInterval = setInterval(function() {
+  let alertBox = document.getElementById("alertBox");
+  alertBox.style.display = "block";
+}, 4000);
+
+console.log(alertInterval);
+
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .no-display{
+        display: none !important;
+    }
+
+    .invalid{
+        border: 2px solid red;
+    }
+
+    .valid{
+        border: 2px solid green;
+    }
+
+    .very-weak{
+        border: 3px solid red;
+        width: 30px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+
+    .strong{
+        border: 3px solid palegreen;
+        width: 30px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+
+    .very-strong{
+        border: 3px solid green;
+        width: 30px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+
+</style>
+<body>
+    <form action="">
+        <h3>Choose your age to see the form to fill</h3>
+    </form>
+    <form action="">
+        <div>
+            <select name="" id="age">
+                <option selected disabled>Select your age</option>
+                <option value="18-30">18 - 30</option>
+                <option value="31-80">31 - 80</option>
+                <option value="81">81 - above</option>
+            </select>
+        </div> <br>
+        <p id="msg"></p>
+        <div style="margin-bottom: 2 rem;" class="" id="form-1">
+            <input type="text" class="username" placeholder="Enter your username"><br>
+            <input type="text" placeholder="Enter your fullname"><br>
+            <input type="email" class="email" placeholder="Enter your email"><br>
+            <span class="message"></span> <br>
+            <input type="text" class="password" placeholder="Enter password"><br>
+            <span class="very-weak no-display"></span><br><br>
+            <span class="strong no-display"></span><br>
+            <span class="very-strong no-display"></span><br>
+            <button type="submit" class="btn" onclick="submitForm()">Submit</button>
+        </div>
+
+        <div class="no-display" id="form-2">
+            <input type="text" class="username" placeholder="Enter your username">
+            <input type="text" class="password" placeholder="Enter password">
+        </div>
+    </form>
+    <script src="form2.js"></script>
+</body>
+</html>

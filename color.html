@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+</head>
+
+<style>
+    .container{
+        width: 50%;
+        height: 200px;
+        margin: auto;
+        box-shadow: 2px 2px 2px grey;
+        background-color: aquamarine;
+    }
+
+    .content{
+        text-align: center;
+        position: relative;
+        top: 50px;
+    }
+
+    .btn{
+        padding: 15px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-weight: 700;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="content">
+            <h3>color name: <span class="hexCode">#FFFFFF</span></h3>
+            <button class="btn">change</button>
+        </div>
+        
+    </div>
+
+    <script>
+        let body = document.querySelector('body');
+        let hex = document.querySelector('.hexCode');
+        let btn = document.querySelector('btn');
+        let hexNumber = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+        document.querySelector('.btn').addEventListener('click', function(){
+            let hash = '#';
+            for (let i = 0; i <= 5; i++){
+                let rand = Math.floor(Math.random() * hexNumber.length);
+
+                // console.log(rand);
+                // console.log(hexNumber[rand]);
+                hash += hexNumber[rand];
+                
+            }
+            console.log(hash);
+            hex.innerHTML = hash;
+            body.style.background = hash;
+        });
+
+    </script>
+    
+</body>
+</html>
